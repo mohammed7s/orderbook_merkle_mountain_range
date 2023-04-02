@@ -8,12 +8,17 @@ A general implementation of Merkle Mountain Range proofs for Orderbooks
 - Create a general Rust library for generating orderbook proofs using Merkle Mountain Ranges
 - Create a RISC0 compatible library  
 
+
 ## Approach
 
 The Merkle Mountain Range library used is: https://github.com/nervosnetwork/merkle-mountain-range
 
 Create orderbook specific merkle mountain range structure and functions
 
+## Merkle Mountain Range Design 
+
+- Totally immutable entries
+- Use additional state recording in vector structure (total buys, total sells, best price, best sell)
 
 
 ## References 
