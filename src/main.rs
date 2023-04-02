@@ -46,12 +46,6 @@ fn main() {
     }
 
 
-    // ob.push(23u64);
-    // let result = ob.get_root();
-    // match result {
-    //     Ok(root) => println!("The root is: {:?}", root),
-    //     Err(error) => println!("Error: {:?}", error),
-    // }
 
     let positions = vec![0];
     let result = ob.gen_proof(positions); 
@@ -63,6 +57,25 @@ fn main() {
             println!("Error generating Merkle proof: {:?}", e);
         }
     }
+
+
+    let mmr_size = 10;
+    let proof_items = vec![
+        Order {
+            quantity: 1,
+            price: 1000,
+            side: Side::Bid,
+        },
+        Order {
+            quantity: 2,
+            price: 2000,
+            side: Side::Bid,
+    },
+];
+
+let merkle_proof: MerkleProof<Order, AddMerge> = MerkleProof::new(mmr_size, proof_items);
+
+
 
 
 }
