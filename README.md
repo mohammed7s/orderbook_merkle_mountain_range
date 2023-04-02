@@ -1,4 +1,4 @@
-## Orderook Merkle Mountain Range Library
+## Orderbook Merkle Mountain Range Library
 
 A general implementation of Merkle Mountain Range proofs for Orderbooks 
 
